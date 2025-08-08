@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import WithAuth from '../utils/withAuth';
+import WithAuth from '../utils/WithAuth';
 import { useNavigate } from 'react-router-dom';
 import { Button, IconButton, TextField } from '@mui/material';
 import RestoreIcon from '@mui/icons-material/Restore';
