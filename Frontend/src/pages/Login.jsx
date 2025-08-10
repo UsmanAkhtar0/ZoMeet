@@ -66,7 +66,7 @@ export default function Login() {
                 }}>
                     <HomeIcon />Home
                 </IconButton >
-                <div className="  flex items-center justify-center m-15 ">
+                <div className="  flex items-center justify-center mt-10 md: mx-10 ">
 
                     <div className="w-full max-w-4xl bg-white rounded-3xl shadow-2xl overflow-hidden md:flex">
                         {/* Image side */}

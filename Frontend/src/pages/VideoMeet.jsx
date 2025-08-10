@@ -498,7 +498,7 @@ export default function VideoMeetComponent() {
 
                     {/* Chat Panel */}
                     {!showModal && (
-                        <div className="absolute top-0 right-0 h-full w-[25vw] bg-[#202124] border-l border-gray-700 flex flex-col z-50">
+                        <div className="absolute top-0 right-0 h-full bg-[#202124] border-l border-gray-700 flex flex-col z-50 w-full md:w-2/5 lg:w-1/4 ">
                             <div className="p-4 border-b border-gray-700 flex justify-between items-center">
                                 <h2 className="text-lg font-semibold">Chat</h2>
                             </div>
@@ -541,7 +541,7 @@ export default function VideoMeetComponent() {
                         ref={localVideoref}
                         autoPlay
                         muted
-                        className="absolute bottom-[120px]  w-[240px] h-[135px] rounded-lg shadow-xl border border-gray-600 z-30"
+                        className="absolute bottom-[120px]  h-[135px]  rounded-lg shadow-xl border border-gray-600 z-30"
                     />
 
                     {/* Remote Videos */}
