@@ -12,6 +12,9 @@ import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 import StopScreenShareIcon from '@mui/icons-material/StopScreenShare'
 import ChatIcon from '@mui/icons-material/Chat'
 import server from '../environment';
+import { useNavigate } from 'react-router-dom';
+
+
 
 const server_url = `${server}`;
 
@@ -63,6 +66,8 @@ export default function VideoMeetComponent() {
 
 
     // }
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         getPermissions();
@@ -399,7 +404,8 @@ export default function VideoMeetComponent() {
             let tracks = localVideoref.current.srcObject.getTracks()
             tracks.forEach(track => track.stop())
         } catch (e) { }
-        window.location.href = "/home"
+        // window.location.href = "/"
+        navigate("/home");
     }
 
     let openChat = () => {
@@ -500,7 +506,8 @@ export default function VideoMeetComponent() {
                     {!showModal && (
                         <div className="absolute top-0 right-0 h-full bg-[#202124] border-l border-gray-700 flex flex-col z-50 w-full md:w-2/5 lg:w-1/4 ">
                             <div className="p-4 border-b border-gray-700 flex justify-between items-center">
-                                <h2 className="text-lg font-semibold">Chat</h2>
+                                <h2 className=" cursor-pointer font-bold" onClick={() => setModal(!showModal)}>&larr;</h2>
+                                <h2 className="text-lg font-semibold text-center">Chat</h2>
                             </div>
 
                             <div className="flex-1 p-4 overflow-y-auto space-y-3">
